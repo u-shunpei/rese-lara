@@ -1,0 +1,95 @@
+a{
+      text-decoration: none;
+      color: blue
+    }
+
+    .nav{
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      background: #eee;
+      transition: .7s;
+      text-align: center; 
+    }
+    .nav ul{
+      padding-top: 80px;
+    }
+    .nav ul li{
+      list-style-type: none;
+      margin-top: 50px;
+    }
+    .menu {
+      display: inline-block;
+      width: 36px;
+      height: 32px;
+      cursor: pointer;
+      position: relative;
+      left: 20px;
+      top: 20px;
+    }
+    .menu__line--top,
+    .menu__line--middle,
+    .menu__line--bottom {
+      display: inline-block;
+      height: 4px;
+      background-color: #000;
+      position: absolute;
+      transition: 0.5s;
+    }
+    .menu__line--top {
+      top: 0;
+      width: 50%;
+    }
+    .menu__line--middle {
+      top: 14px;
+      width: 100%;
+    }
+    .menu__line--bottom {
+      bottom: 0;
+      width: 20%;
+    }
+    .menu.open span:nth-of-type(1) {
+      top: 14px;
+      transform: rotate(45deg);
+      width: 100%;
+    }
+    .menu.open span:nth-of-type(2) {
+      opacity: 0;
+    }
+    .menu.open span:nth-of-type(3) {
+      top: 14px;
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+    .in{
+      transform: translateX(100%);
+    }
+    .shoplist{
+      width:85%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    .shop_card{
+     width: 23%;
+     height: 290px;
+     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+     margin-bottom: 17px;
+     border-radius: 10px;
+    }
+    .shop_card img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .shop_content{
+      padding: 10px;
+      font-weight: bold;
+    }
+    .shop_name, .shop_tag{
+      margin: 0 0 10px 0;
+    }
+    .detail_btn{
+      background-color: #52b1ff;
+    }

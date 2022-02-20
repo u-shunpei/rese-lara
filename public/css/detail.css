@@ -1,0 +1,17 @@
+body{
+      background-color: #dbdbdb;
+    }
+    .container{
+      width: 90%;
+    }
+    .card{
+      width: 40%;
+      display: inline-block;
+    }
+    .card_img img{
+      width: 100%;
+    }
+    .reservation{
+      display: inline-block;
+      height: 500vh;
+    }
