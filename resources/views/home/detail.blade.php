@@ -136,9 +136,9 @@
       <span class="back_btn">
         <a href="http://localhost:8000/">&lt;</a>
       </span>
-      <span class="card-shop_name">{{ $_GET["name"]; }}</span>
+      <span class="card-shop_name">{{ $_GET['name']; }}</span>
       <div class="card_img">
-        <img src="{{ $_GET["image_url"]; }}" alt="">
+        <img src="{{ $_GET['image_url']; }}" alt="">
       </div>
       <div class="card_tag">
         <span class="card_area">#{{ $_GET["area_id"]; }}</span>
@@ -150,7 +150,7 @@
       <h2>予約</h2>
       <form action="/reserve" method="POST">
         @csrf
-        <input type="hidden" name="id" value="{{ $_GET["id"]; }}" />
+        <input type="hidden" name="shop_id" value="{{ $_GET['id']; }}" />
         <!--<input type="text" name="user_id" value="" />-->
         <input type="date" name="date" class="date" id="text1" onKeyUp="document.getElementById('same1').innerText = document.getElementById('text1').value;" /><br>
         <input type="time" name="time" id="" class="reserve_time" />

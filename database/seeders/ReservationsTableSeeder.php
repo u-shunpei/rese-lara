@@ -16,13 +16,6 @@ class ReservationsTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
-            'shop_id' => '1',
-            'user_id' =>'1',
-            'num_of_users' => '1',
-            'date' => '2020-02-12',
-            'time' => '12:00:00'
-        ];
-        DB::table('reservations')->insert($param);
+        //
     }
 }
