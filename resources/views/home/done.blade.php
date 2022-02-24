@@ -14,6 +14,7 @@
   background: #eee;
   transition: .7s;
   text-align: center;
+  z-index: 3;
 }
 .nav ul{
   padding-top: 80px;
@@ -30,13 +31,15 @@
   position: relative;
   left: 20px;
   top: 20px;
+  z-index: 4;
+  background-color: blue;
 }
 .menu__line--top,
 .menu__line--middle,
 .menu__line--bottom {
   display: inline-block;
   height: 4px;
-  background-color: #000;
+  background-color: white;
   position: absolute;
   transition: 0.5s;
 }
@@ -68,16 +71,66 @@
 .in{
   transform: translateX(100%);
 }
+.top {
+  display: flex;
+  margin-left: 50px;
+}
+h1 {
+  margin-left: 50px;
+  color: blue;
+}
+body{
+  background-color: #dbdbdb;
+}
+.card{
+  background-color: white;
+  width: 30%;
+  height: 30vh;
+  margin:30px auto;
+  text-align: center;
+  z-index: 2;
+}
+.thanks {
+  position: relative;
+  top: 20%;
+}
+.txt {
+  line-height: 80px;
+  font-size: 20px;
+}
+.return_btn {
+  background-color: blue;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: none;
+}
   </style>
 </head>
 <body>
-  <div class="conteiner">
-    <div class="container">
+   @auth
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">Mypage</a></li>
+        <li><a href="http://localhost:8000/">Home</a></li>
+        <li><a href="http://localhost:8000/login">Logout</a></li>
+        <li><a href="http://localhost:8000/mypage">Mypage</a></li>
+      </ul>
+    </nav>
+    <div class="top">
+      <div class="menu" id="menu">
+        <span class="menu__line--top"></span>
+        <span class="menu__line--middle"></span>
+        <span class="menu__line--bottom"></span>
+      </div>
+      <h1>Rese</h1>
+    </div>
+    @endauth
+    @guest
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="http://localhost:8000/">Home</a></li>
+        <li><a href="http://localhost:8000/register">Registration</a></li>
+        <li><a href="http://localhost:8000/login">Login</a></li>
       </ul>
     </nav>
     <div class="menu" id="menu">
@@ -86,12 +139,13 @@
       <span class="menu__line--bottom"></span>
     </div>
     <h1>Rese</h1>
+    @endguest
+    
     <div class="card">
-      <p>ご予約ありがとうございます</p>
-      <form action="/detail/{shop_id}" method="get">
-        @csrf
-        <button class="return_btn">戻る</button>
-      </form>
+      <div class="thanks">
+        <span class="txt">ご予約ありがとうございます</span><br>
+         <button type="button" class="return_btn" onClick="history.back()">戻る</button>
+      </div>
     </div>
   </div>
   <script>

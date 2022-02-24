@@ -1,9 +1,10 @@
 <x-guest-layout>
+    @auth
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">Mypage</a></li>
+        <li><a href="http://localhost:8000/">Home</a></li>
+        <li><a href="http://localhost:8000/login">Logout</a></li>
+        <li><a href="http://localhost:8000/mypage">Mypage</a></li>
       </ul>
     </nav>
     <div class="menu" id="menu">
@@ -11,6 +12,21 @@
       <span class="menu__line--middle"></span>
       <span class="menu__line--bottom"></span>
     </div>
+    @endauth
+    @guest
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="http://localhost:8000/">Home</a></li>
+        <li><a href="http://localhost:8000/register">Registration</a></li>
+        <li><a href="http://localhost:8000/login">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu" id="menu">
+      <span class="menu__line--top"></span>
+      <span class="menu__line--middle"></span>
+      <span class="menu__line--bottom"></span>
+    </div>
+    @endguest
     <h1>Rese</h1>
     <x-auth-card>
         <x-slot name="logo">
@@ -29,6 +45,12 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
+
+            <div>
+                <x-label for="name" />
+
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus placeholder="Username" />
+            </div>
 
             <!-- Email Address -->
             <div>

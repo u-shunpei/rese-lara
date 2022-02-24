@@ -5,7 +5,7 @@ a{
 
     .nav{
       position: absolute;
-      height: 100vh;
+      height: 250vh;
       width: 100%;
       left: -100%;
       background: #eee;
@@ -64,6 +64,21 @@ a{
     }
     .in{
       transform: translateX(100%);
+    }
+    h1 {
+        margin-left: 100px;
+        color: blue;
+    }
+    .ttl{
+      display: flex;
+      width: 85%;
+      margin: 50px auto;
+    }
+    h1{
+      margin: 10px 0 0 2%;
+    }
+    .search{
+      margin: 20px 0 0 auto;
     }
     .shoplist{
       width:85%;

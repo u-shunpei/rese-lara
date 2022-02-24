@@ -9,7 +9,7 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['num_of_users', 'date', 'time'];
+    protected $fillable = ['shop_id', 'user_id', 'num_of_users', 'date', 'time'];
 
     public static $rules = array(
         'shop_id' => 'required',

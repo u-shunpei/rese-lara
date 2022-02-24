@@ -8,12 +8,15 @@ use App\Http\Controllers\ReservationController;
 
 
 Route::get('/', [ShopController::class, 'index'])->name('index.shop');
+Route::post('/', [ShopController::class, 'search']);
 Route::get('/detail/{shop_id}', [ShopController::class, 'detail'])->name('detail.shop');
 Route::get('/mypage', [UserController::class, 'mypage'])->name('mypage');
 Route::post('/like', [LikeController::class, 'create'])->name('create.like');
 //Route::post('/like/delete', [LikeController::class, 'delete'])->name('delete.like');
 Route::post('/reserve', [ReservationController::class, 'create'])->name('create.reservation');
 Route::get('reserve', [ReservationController::class, 'index']);
+Route::get('/detail/{shop_id}', [ReservationController::class, 'back']);
+Route::get('/mypage', [UserController::class, 'mypage']);
 
 //Route::post('/reserve/delete', [ReservationController::class, 'delete'])->name('delete.reservation');
 

@@ -29,6 +29,10 @@ class ReservationController extends Controller
         return view('home.done', ['input' => $input]);
     }
     public function index() {
+        
         return view('home.done');
+    }
+    public function back(Request $request) {
+        return view('home.detail');
     }
 }

@@ -11,6 +11,8 @@ class Area extends Model
 
     protected $table = 'areas';
 
+    protected $fillable = ['name'];
+
     public function shop() {
         return $this->hasMany('App\Models\Shop');
     }

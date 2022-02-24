@@ -75,6 +75,14 @@
     .in{
       transform: translateX(100%);
     }
+    .top {
+      display: flex;
+      margin-left: 50px;
+    } 
+    h1 {
+      margin-left: 50px;
+      color: blue;
+    }
     body{
       background-color: #dbdbdb;
     }
@@ -96,8 +104,12 @@
       color: white;
     } 
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
 <body>
+  <div id="app">
+    <example-component></example-component>
+  @auth
   <div class="container">
     @auth
     <nav class="nav" id="nav">
@@ -141,21 +153,33 @@
         <img src="{{ $_GET['image_url']; }}" alt="">
       </div>
       <div class="card_tag">
-        <span class="card_area">#{{ $_GET["area_id"]; }}</span>
-        <span class="card_genre">#{{ $_GET["genre_id"]; }}</span>
+        <span class="card_area">#{{ $_GET['area_id']; }}</span>
+        <span class="card_genre">#{{ $_GET['genre_id']; }}</span>
       </div>
-      <p class="card_content">{{ $_GET["description"]; }}</p>
+      <p class="card_content">{{ $_GET['description']; }}</p>
     </div>
     <div class="reservation">
       <h2>予約</h2>
       <form action="/reserve" method="POST">
         @csrf
         <input type="hidden" name="shop_id" value="{{ $_GET['id']; }}" />
-        <!--<input type="text" name="user_id" value="" />-->
-        <input type="date" name="date" class="date" id="text1" onKeyUp="document.getElementById('same1').innerText = document.getElementById('text1').value;" /><br>
-        <input type="time" name="time" id="" class="reserve_time" />
-        <select name="num_of_users" id="number">
-          <optgroup label="人数">
+        <!-- <input type="text" name="user_id" value="" /> -->
+        <input type="hidden" name="area_id" value="{{ $_GET['area_id']; }}" />
+        <input type="hidden" name="genre_id" value="{{ $_GET['genre_id']; }}" />
+        <input type="date" name="date" class="date" v-model="date"  /><br>
+        <select name="time" onchange="inputTime(this);">
+          <option disabled value="selected"></option>
+          <option value="16:00:00">16:00</option>
+          <option value="17:00:00">17:00</option>
+          <option value="18:00:00">18:00</option>
+          <option value="19:00:00">19:00</option>
+          <option value="20:00:00">20:00</option>
+          <option value="21:00:00">21:00</option>
+          <option value="22:00:00">22:00</option>
+          <option value="23:00:00">23:00</option>
+        </select>
+        <select name="num_of_users" onchange="inputNum(this);">
+          <option disabled value=""></option>
             <option value="1">1人</option>
             <option value="2">2人</option>
             <option value="3">3人</option>
@@ -174,14 +198,12 @@
             </tr>
             <tr>
               <th>Date</th>
-              <td>
-                <span id="same1"></span>
-              </td>
+              <td></td>
             </tr>
             <tr>
               <th>Time</th>
               <td>
-                <span id="jikann"></span>
+                <span id="time"></span>
               </td>
             </tr>
           </table>
@@ -190,13 +212,24 @@
       </form>
     </div>
   </div>
-  <script>
-    const target = document.getElementById("menu");
+  @endauth
+  
+    </div>
+    <script>
+  const target = document.getElementById("menu");
     target.addEventListener('click', () => {
     target.classList.toggle('open');
     const nav = document.getElementById("nav");
     nav.classList.toggle('in');
     });
-  </script>
+   Vue.createApp({
+  data: function() {
+    return {
+      selected: '',
+    }
+  }
+}).mount('#app')
+    </script>
+      
 </body>
 </html>

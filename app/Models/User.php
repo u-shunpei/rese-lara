@@ -47,5 +47,8 @@ class User extends Authenticatable
      public function reservation() {
          return $this->hasMany('App\Models\Reservation');
      }
+     public function like() {
+         return $this->hasMany('App\Models\Like');
+     }
 
 }

@@ -11,6 +11,8 @@ class Genre extends Model
 
     protected $table = 'genres';
 
+    protected $fillable = ['name'];
+
     public function shop() {
         return $this->hasMany('App\Models\Shop');
     }
