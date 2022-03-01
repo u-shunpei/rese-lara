@@ -8,11 +8,12 @@ use App\Http\Requests\CreateReservationRequest;
 use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
-{ 
-    public function create(CreateReservationRequest $request){
+{
+    public function create(CreateReservationRequest $request)
+    {
         $input = $request->validated();
         //$input['user_id'] = Auth::id();//ログインしてるユーザーのID取得
-        
+
         Reservation::create([
             'shop_id' => $input['shop_id'],
             'user_id' => Auth::id(),
@@ -28,11 +29,12 @@ class ReservationController extends Controller
         // $reservation->fill($form)->save();
         return view('home.done', ['input' => $input]);
     }
-    public function index() {
-        
+    public function index()
+    {
         return view('home.done');
     }
-    public function back(Request $request) {
+    public function back()
+    {
         return view('home.detail');
     }
 }

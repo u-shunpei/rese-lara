@@ -719,6 +719,9 @@ select {
 }
 .w-full {
   width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .w-48 {
   width: 12rem;
@@ -1382,7 +1385,7 @@ a{
       height: 100vh;
       width: 100%;
       left: -100%;
-      background: #eee;
+      background: white;
       transition: .7s;
       text-align: center; 
     }
@@ -1438,5 +1441,18 @@ a{
     }
     .in{
       transform: translateX(100%);
+    }
+    .ttl{
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+    }
+    h1{
+      margin: 10px 0 0 2%;
+    }
+    h2{
+      background-color: #2563eb;
+      color: white;
+      height: 10px;
     }
 

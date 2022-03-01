@@ -1,9 +1,13 @@
 <x-guest-layout>
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">Mypage</a></li>
+        <li><a href="http://localhost:8000/">Home</a></li>
+        <form action="/logout" method="post">
+          @csrf
+           <li><button>Logout</button></li>
+        </form>
+       
+        <li><a href="http://localhost:8000/mypage">Mypage</a></li>
       </ul>
     </nav>
     <div class="menu" id="menu">
@@ -13,11 +17,12 @@
     </div>
     <h1>Rese</h1>
     <x-auth-card>
-        <x-slot name="logo">
+        {{-- ロゴ --}}
+        {{-- <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
-        </x-slot>
+        </x-slot> --}}
 
         <h2>Resistration</h2>
 

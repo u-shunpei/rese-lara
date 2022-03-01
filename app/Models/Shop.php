@@ -33,4 +33,34 @@ class Shop extends Model
    public function like() {
        return $this->hasMany('App\Models\Like');
    }
+
+   public static function searchShops($area_id, $genre_id, $keyword)
+    {
+        $query = Shop::query();
+
+        if (!empty($area_id)) {
+            $query->whereHas('area', function ($query) use ($area_id) {
+                $query->where('id', $area_id);
+            });
+        } else {
+            $query->with('area');
+        }
+
+        if (!empty($genre_id)) {
+            $query->whereHas('genre', function ($query) use ($genre_id) {
+                $query->where('id', $genre_id);
+            });
+        } else {
+            $query->with('genre');
+        }
+
+        if (!empty($keyword)) {
+            $query->where('name', 'like', "%$keyword%");
+        }
+
+        $shops = $query->get();
+
+        return $shops;
+    }
+
 }

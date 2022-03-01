@@ -74,55 +74,37 @@
       font-size: 24px;
       font-weight: 500;
     }
-    
     h1 {
-        margin-left: 100px;
+        margin-left: 40px;
         color: blue;
-    }
-    /* ここまでがナビ */
-    body{
-      background-color: #eee;
     }
     .ttl{
       display: flex;
       width: 85%;
-      margin: 50px auto;
+      margin: 30px auto 0;
     }
-    h1{
-      margin: 10px 0 0 2%;
+    body{
+      background-color: #eee;
     }
-    .search{
-      margin: 20px 0 0 auto;
+    .card{
+      background-color: white;
+      width: 30%;
+      height: 30vh;
+      margin:30px auto;
+      text-align: center;
+      box-shadow: 2px 2px 4px;
     }
-    .shoplist{
-      width:85%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 0 auto;
+    .thanks{
+      padding: 50px
     }
-    .shop_card{
-     width: 23%;
-     height: 290px;
-     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
-     margin-bottom: 17px;
-     border-radius: 10px;
+    .txt {
+      line-height: 80px;
+      font-size: 20px;
     }
-    .shop_card img{
-      width: 100%;
-      border-radius: 10px 10px 0 0;
-    }
-    .shop_content{
-      padding: 10px;
-      font-weight: bold;
-    }
-    .shop_name, .shop_tag{
-      margin: 0 0 10px 0;
-    }
-    .detail_btn{
-      background-color: #1458e1;
-      border: none;
+    .return_btn {
+      background-color: blue;
       color: white;
       padding: 3px 10px;
       border-radius: 5px;
+      border: none;
     }
