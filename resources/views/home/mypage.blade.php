@@ -72,6 +72,108 @@
                 </table>
             </div>
         </div>
+        <div class="like-shop">
+            @foreach ($items as $item)
+            <div class="shop_card">
+                <div class="shop_img">
+                    <img src="{{ $_POST['image_url']; }}" alt="" />
+                </div>
+                <div class="shop_content">
+                    <p class="shop_name">{{ $_POST['name']; }}</p>
+                    <p class="shop_tag">
+                        <span class="shop_area">＃{{ $_POST['area_id']; }}</span
+                                >
+                                <span class="shop_genre"
+                                    >＃{{ $_POST['genre_id']; }}</span
+                                >
+                            </p>
+                            <form action="/detail/{shop_id}" method="GET">
+                                @csrf
+                                <input
+                                    type="hidden"
+                                    name="id"
+                                    value="{{$item->id}}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="name"
+                                    value="{{ $item->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="area_id"
+                                    value="{{ $item->area->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="genre_id"
+                                    value="{{ $item->genre->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="description"
+                                    value="{{ $item->description }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="image_url"
+                                    value="{{ $item->image_url }}"
+                                />
+                                <input
+                                    type="submit"
+                                    class="detail_btn"
+                                    value="詳しく見る"
+                                />
+                            </form>
+                            <form action="/like" method="POST">
+                                @csrf
+                                <input
+                                    type="hidden"
+                                    name="shop_id"
+                                    value="{{ $item->id }}"
+                                />
+                                <!-- mypageにデータを送る -->
+                                <input type="hidden" name="id" value="" />
+                                <input
+                                    type="submit"
+                                    class="like_btn"
+                                    value="いいね"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="id"
+                                    value="{{$item->id}}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="name"
+                                    value="{{ $item->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="area_id"
+                                    value="{{ $item->area->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="genre_id"
+                                    value="{{ $item->genre->name }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="description"
+                                    value="{{ $item->description }}"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="image_url"
+                                    value="{{ $item->image_url }}"
+                                />
+                            </form>
+                        </div>
+                    </div>
+                    @endforeach
+        </div>
         @endauth
     </div>
     <a href="https://chiebukuro.yahoo.co.jp/" style="font-size:72px; text-decoration:none;" alt="ハートボタン">&#9829;</a>

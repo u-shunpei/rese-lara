@@ -25,7 +25,6 @@ class CreateLikeRequest extends FormRequest
     {
         return [
             'shop_id' => 'required',
-            'user_id' => 'required',
         ];
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
+use App\Models\User;
 
 class ShopController extends Controller
 {
@@ -14,7 +15,8 @@ class ShopController extends Controller
         $items = Shop::all();
         $areas = Area::all();
         $genres = Genre::all();
-        return view('home.index', compact('items', 'areas', 'genres'));
+        $users = User::all();
+        return view('home.index', compact('items', 'areas', 'genres', 'users'));
     }
     public function detail(Request $request)
     {
