@@ -5,14 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Document</title><
     <link rel="stylesheet" href="/css/shop.css" />
+    <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="ttl">
-            @auth
+<div class="container">
+    <div class="ttl">
+        @auth
             <nav class="nav" id="nav">
                 <ul>
                     <li><a href="http://localhost:8000/">Home</a></li>
@@ -30,62 +31,62 @@
                 <span class="menu__line--middle"></span>
                 <span class="menu__line--bottom"></span>
             </div>
-            @endauth @guest
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="http://localhost:8000/">Home</a></li>
-                    <li>
-                        <a href="http://localhost:8000/register">Registration</a
+        @endauth @guest
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="http://localhost:8000/">Home</a></li>
+                        <li>
+                            <a href="http://localhost:8000/register">Registration</a
                             >
                         </li>
                         <li><a href="http://localhost:8000/login">Login</a></li>
-                </ul>
-            </nav>
-            <div class="menu" id="menu">
-                <span class="menu__line--top"></span>
-                <span class="menu__line--middle"></span>
-                <span class="menu__line--bottom"></span>
-            </div>
+                    </ul>
+                </nav>
+                <div class="menu" id="menu">
+                    <span class="menu__line--top"></span>
+                    <span class="menu__line--middle"></span>
+                    <span class="menu__line--bottom"></span>
+                </div>
             @endguest
             <h1>Rese</h1>
             @auth
-            <form action="/" method="post" class="search">
-                @csrf
-                <select name="area_id" id="">
+                <form action="/" method="post" class="search">
+                    @csrf
+                    <select name="area_id" id="">
                         <option value="">All area</option>
                         @foreach($areas as $area)
-                        <option value="{{ $area->id }}" name="name">
-                            {{ $area->name }}
-                        </option>
+                            <option value="{{ $area->id }}" name="name">
+                                {{ $area->name }}
+                            </option>
                         @endforeach
                     </select>
-                <select name="genre_id" id="">
+                    <select name="genre_id" id="">
                         <option value="">All genre</option>
                         @foreach($genres as $genre)
-                        <option value="{{ $genre->id }}" name="genre_name">
-                            {{ $genre->name }}
-                        </option>
+                            <option value="{{ $genre->id }}" name="genre_name">
+                                {{ $genre->name }}
+                            </option>
                         @endforeach
                     </select>
-                <input type="search" name="name" placeholder="search..." />
-                <button class="index-btn">検索</button>
-            </form>
-        </div>
-        @if(isset($items))
+                    <input type="search" name="name" placeholder="search..." />
+                    <button class="index-btn">検索</button>
+                </form>
+    </div>
+    @if(isset($shops))
         <main>
             <div class="shoplist">
-                @foreach ($items as $item)
-                <div class="shop_card">
-                    <div class="shop_img">
-                        <img src="{{$item->image_url}}" alt="" />
-                    </div>
-                    <div class="shop_content">
-                        <p class="shop_name">{{$item->name}}</p>
-                        <p class="shop_tag">
-                            <span class="shop_area">＃{{$item->area->name}}</span
+                @foreach ($shops as $shop)
+                    <div class="shop_card">
+                        <div class="shop_img">
+                            <img src="{{$shop->image_url}}" alt="" />
+                        </div>
+                        <div class="shop_content">
+                            <p class="shop_name">{{$shop->name}}</p>
+                            <p class="shop_tag">
+                                <span class="shop_area">＃{{$shop->area->name}}</span
                                 >
                                 <span class="shop_genre"
-                                    >＃{{$item->genre->name}}</span
+                                >＃{{$shop->genre->name}}</span
                                 >
                             </p>
                             <form action="/detail/{shop_id}" method="GET">
@@ -93,32 +94,32 @@
                                 <input
                                     type="hidden"
                                     name="id"
-                                    value="{{$item->id}}"
+                                    value="{{$shop->id}}"
                                 />
                                 <input
                                     type="hidden"
                                     name="name"
-                                    value="{{ $item->name }}"
+                                    value="{{ $shop->name }}"
                                 />
                                 <input
                                     type="hidden"
                                     name="area_id"
-                                    value="{{ $item->area->name }}"
+                                    value="{{ $shop->area->name }}"
                                 />
                                 <input
                                     type="hidden"
                                     name="genre_id"
-                                    value="{{ $item->genre->name }}"
+                                    value="{{ $shop->genre->name }}"
                                 />
                                 <input
                                     type="hidden"
                                     name="description"
-                                    value="{{ $item->description }}"
+                                    value="{{ $shop->description }}"
                                 />
                                 <input
                                     type="hidden"
                                     name="image_url"
-                                    value="{{ $item->image_url }}"
+                                    value="{{ $shop->image_url }}"
                                 />
                                 <input
                                     type="submit"
@@ -126,58 +127,43 @@
                                     value="詳しく見る"
                                 />
                             </form>
-                            <form action="/like" method="POST">
-                                @csrf
-                                <input
-                                    type="hidden"
-                                    name="shop_id"
-                                    value="{{ $item->id }}"
-                                />
-                                <!-- mypageにデータを送る -->
-                                <input type="hidden" name="id" value="" />
-                                <input
-                                    type="submit"
-                                    class="like_btn"
-                                    value="いいね"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="id"
-                                    value="{{$item->id}}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="name"
-                                    value="{{ $item->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="area_id"
-                                    value="{{ $item->area->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="genre_id"
-                                    value="{{ $item->genre->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="description"
-                                    value="{{ $item->description }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="image_url"
-                                    value="{{ $item->image_url }}"
-                                />
-                            </form>
+                            {{--                            <form action="/like" method="POST" class="like">--}}
+                            {{--                                @csrf--}}
+                            {{--                                <input--}}
+                            {{--                                    type="hidden"--}}
+                            {{--                                    name="shop_id"--}}
+                            {{--                                    value="{{ $shop->id }}"--}}
+                            {{--                                />--}}
+                            {{--                                <button type="submit" class="like-btn">--}}
+                            {{--                                    <i class="fas fa-heart"></i>--}}
+                            {{--                                </button>--}}
+                            @if(@isset($_POST['user_id']))
+                                <form action="/like/delete" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
+                                    <button type="submit" class="fas like_btn" value="&#xf004">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </form>
+                            @else
+
+                                <form action="/like" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
+                                    <button type="submit" class="fas like_btn" value="&#xf004">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </form>
+                            @endif
+                            {{--                            </form>--}}
                         </div>
                     </div>
-                    @endforeach
-                </div>
-            </main>
-            @endif @endauth
-        </div>
-        <script src="/js/main.js"></script>
-    </body>
+                @endforeach
+            </div>
+        </main>
+    @endif @endauth
+</div>
+<script src="/js/main.js"></script>
+<script src="/js/shop.js"></script>
+</body>
 </html>

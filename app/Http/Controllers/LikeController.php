@@ -20,24 +20,19 @@ class LikeController extends Controller
       'shop_id' => $input['shop_id'],
       'user_id' => Auth::id()
     ]);
-    $items = Shop::all();
-    $areas = Area::all();
-    $genres = Genre::all();
-    $users = User::all();
-    return redirect('/')->with([
-      'items' => $items,
-      'areas' => $areas,
-      'genred' => $genres,
-      'users' => $users
-    ]);
-    // return view('home.index', compact('input', 'areas', 'genres', 'users', 'items'));
+    return back();
+  }
+  public function delete(Request $request)
+  {
+      $like = Like::where('shop_id', $request->shop_id)->where('user_id', Auth::id())->delete();
+      return back()->with('like');
   }
   public function index()
   {
-    $items = Shop::all();
+    $shops = Shop::all();
     $areas = Area::all();
     $genres = Genre::all();
     $users = User::all();
-    return view('home.index', compact('items', 'areas', 'genres', 'users'));
+    return view('home.index', compact('shops', 'areas', 'genres', 'users'));
   }
 }

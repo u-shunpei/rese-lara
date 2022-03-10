@@ -100,6 +100,93 @@ h1 {
     margin: 30px auto 0;
 }
 
-body {
+body{
     background-color: #eee;
+}
+.ttl{
+    display: flex;
+    width: 85%;
+    margin: 50px auto;
+}
+h1{
+    margin: 10px 0 0 2%;
+}
+.search{
+    margin: 20px 0 0 auto;
+}
+.shoplist{
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.shop_card{
+    width: 23%;
+    height: 290px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+    margin-bottom: 17px;
+    border-radius: 10px;
+}
+.shop_card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.shop_content{
+    padding: 10px;
+    font-weight: bold;
+}
+.shop_name, .shop_tag{
+    margin: 0 0 10px 0;
+}
+.detail_btn{
+    background-color: #1458e1;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.heart {
+    display: inline-block;
+    color: #333;/*線の色*/
+    position: relative;
+    margin-top: 6px;/*要調整*/
+    margin-left: 5px;/*要調整*/
+    width: 9px;
+    height: 9px;
+    border-left: solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
+    transform: rotate(-45deg) scale(1);/*scale要調整*/
+    background: none;/*背景色*/
+}
+.heart:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -1px;
+    width: 8px;
+    height: 5px;
+    border-radius: 5px 5px 0 0;
+    border-top: solid 1px currentColor;
+    border-left: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    background: none;/*背景色*/
+}
+.heart:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 8px;
+    width: 5px;
+    height: 8px;
+    border-radius: 0 5px 5px 0;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
+    background: none;/*背景色*/
+}
+.like_btn{
+    border: none;
+    outline: none;
+    background: transparent;
 }

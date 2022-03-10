@@ -21,12 +21,6 @@ class ReservationController extends Controller
             'time' => $input['time'],
             'num_of_users' => $input['num_of_users']
         ]);
-
-        // dd($input);
-        // // $reservation = new Reservation;
-        // $form = $request->all();
-        // unset($form['_token_']);
-        // $reservation->fill($form)->save();
         return view('home.done', ['input' => $input]);
     }
     public function index()
