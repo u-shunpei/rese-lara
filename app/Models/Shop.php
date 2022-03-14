@@ -18,23 +18,30 @@ class Shop extends Model
         'image_url' => 'required'
     );
 
-     protected $table ="shops";
+    protected $table = "shops";
 
 
-    public function area() {
+    public function area()
+    {
         return $this->belongsTo('App\Models\Area');
     }
-    public function genre() {
+
+    public function genre()
+    {
         return $this->belongsTo('App\Models\Genre');
     }
-   public function Reservation() {
-       return $this->hasMany('App\Models\Reservation');
-   }
-   public function like() {
-       return $this->hasMany('App\Models\Like');
-   }
 
-   public static function searchShops($area_id, $genre_id, $keyword)
+    public function Reservation()
+    {
+        return $this->hasMany('App\Models\Reservation');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Models\Like');
+    }
+
+    public static function searchShops($area_id, $genre_id, $keyword)
     {
         $query = Shop::query();
 
@@ -63,4 +70,12 @@ class Shop extends Model
         return $shops;
     }
 
+    public static function getShops(int $user_id)
+    {
+        return Shop::with('area', 'genre')->with([
+            'likes' => function ($query) use ($user_id) {
+                $query->where('user_id', $user_id);
+            }
+        ])->get();
+    }
 }

@@ -27,12 +27,4 @@ class LikeController extends Controller
       $like = Like::where('shop_id', $request->shop_id)->where('user_id', Auth::id())->delete();
       return back()->with('like');
   }
-  public function index()
-  {
-    $shops = Shop::all();
-    $areas = Area::all();
-    $genres = Genre::all();
-    $users = User::all();
-    return view('home.index', compact('shops', 'areas', 'genres', 'users'));
-  }
 }

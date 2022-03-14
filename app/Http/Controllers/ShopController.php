@@ -6,19 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
-use App\Models\User;
-use App\Models\Like;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
     public function index()
     {
-        $shops = Shop::all();
+        $shops = Shop::getShops(Auth::id());
+//        $shops = Shop::all();
         $areas = Area::all();
         $genres = Genre::all();
-        $likes = Like::all();
-        $users = User::all();
-        return view('home.index', compact('shops', 'areas', 'genres', 'likes', 'users'));
+
+        return view('home.index', compact('shops', 'areas', 'genres'));
     }
     public function detail(Request $request)
     {
@@ -29,9 +28,6 @@ class ShopController extends Controller
     {
 
         $shops = Shop::searchShops($request->area_id, $request->genre_id, $request->name);
-
-        // where('area_id', $request->area_id)->where('genre_id', $request->genre_id)->orWhere('name', $request->name)->get();
-        // dd($items);
         $areas = Area::all();
         $genres = Genre::all();
         return view('home.index', compact('shops', 'areas', 'genres'));

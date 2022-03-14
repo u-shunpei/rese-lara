@@ -78,6 +78,7 @@
     h1 {
         margin-left: 100px;
         color: blue;
+        font-size: 30px;
     }
     /* ここまでがナビ */
     body{
@@ -125,4 +126,24 @@
       color: white;
       padding: 3px 10px;
       border-radius: 5px;
+    }
+    .heart_red{
+        color: red;
+        font-size: 20px;
+        margin-left: 100px;
+    }
+    .gray_heart{
+        color: #cbd5e0;
+        font-size: 20px;
+        margin-left: 100px;
+
+    }
+    .like_btn{
+        border: none;
+    }
+    .detail{
+        display: inline-block;
+    }
+    .like{
+        display: inline-block;
     }

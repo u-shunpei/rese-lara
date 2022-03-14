@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="/css/mypage.css" />
+    <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -53,26 +55,26 @@
         <div class="reservation">
             <p>予約状況</p>
             <div class="reservation_card">
-                <div class="card_img">
-                    <img src="/images/tokei.png" alt="" />
-                    <span class="">予約</span>
+                <div class="reservation_ttl">
+                <i class="fa-solid fa-clock"></i>
+                    <span class="reserve">予約</span>
                 </div>
                 <table>
                     <tr>
                         <th>Shop</th>
-                        <td></td>
+                        <td>仙人</td>
                     </tr>
                     <tr>
                         <th>Date</th>
-                        <td></td>
+                        <td>2022/03/15</td>
                     </tr>
                     <tr>
                         <th>Time</th>
-                        <td></td>
+                        <td>16:00:00</td>
                     </tr>
                     <tr>
                         <th>Number</th>
-                        <td></td>
+                        <td>3人</td>
                     </tr>
                 </table>
             </div>

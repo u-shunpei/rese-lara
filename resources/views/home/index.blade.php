@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title><
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="/css/shop.css" />
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +23,7 @@
                         <li><button class="logout">Logout</button></li>
                     </form>
                     <li>
-                        <a href="http://localhost:8000/like">Mypage</a>
+                        <a href="http://localhost:8000/mypage">Mypage</a>
                     </li>
                 </ul>
             </nav>
@@ -89,73 +90,63 @@
                                 >＃{{$shop->genre->name}}</span
                                 >
                             </p>
-                            <form action="/detail/{shop_id}" method="GET">
-                                @csrf
-                                <input
-                                    type="hidden"
-                                    name="id"
-                                    value="{{$shop->id}}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="name"
-                                    value="{{ $shop->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="area_id"
-                                    value="{{ $shop->area->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="genre_id"
-                                    value="{{ $shop->genre->name }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="description"
-                                    value="{{ $shop->description }}"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="image_url"
-                                    value="{{ $shop->image_url }}"
-                                />
-                                <input
-                                    type="submit"
-                                    class="detail_btn"
-                                    value="詳しく見る"
-                                />
-                            </form>
-                            {{--                            <form action="/like" method="POST" class="like">--}}
-                            {{--                                @csrf--}}
-                            {{--                                <input--}}
-                            {{--                                    type="hidden"--}}
-                            {{--                                    name="shop_id"--}}
-                            {{--                                    value="{{ $shop->id }}"--}}
-                            {{--                                />--}}
-                            {{--                                <button type="submit" class="like-btn">--}}
-                            {{--                                    <i class="fas fa-heart"></i>--}}
-                            {{--                                </button>--}}
-                            @if(@isset($_POST['user_id']))
-                                <form action="/like/delete" method="POST">
+                            <div>
+                                <form action="/detail/{shop_id}" method="GET" class="detail">
                                     @csrf
-                                    <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
-                                    <button type="submit" class="fas like_btn" value="&#xf004">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </button>
+                                    <input
+                                        type="hidden"
+                                        name="id"
+                                        value="{{$shop->id}}"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="name"
+                                        value="{{ $shop->name }}"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="area_id"
+                                        value="{{ $shop->area->name }}"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="genre_id"
+                                        value="{{ $shop->genre->name }}"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="description"
+                                        value="{{ $shop->description }}"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="image_url"
+                                        value="{{ $shop->image_url }}"
+                                    />
+                                    <input
+                                        type="submit"
+                                        class="detail_btn"
+                                        value="詳しく見る"
+                                    />
                                 </form>
-                            @else
-
-                                <form action="/like" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
-                                    <button type="submit" class="fas like_btn" value="&#xf004">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </button>
-                                </form>
-                            @endif
-                            {{--                            </form>--}}
+                                @if(count($shop->likes)===0)
+                                    <form action="/like" method="POST" class="like">
+                                        @csrf
+                                        <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
+                                        <button type="submit" class="fas like_btn" value="&#xf004">
+                                            <i class="fa-solid fa-heart gray_heart"></i>
+                                        </button>
+                                    </form>
+                                @else
+                                    <form action="/like/delete" method="POST" class="like">
+                                        @csrf
+                                        <input type="hidden" name="shop_id" value="{{ $shop->id }}" />
+                                        <button type="submit" class="fas like_btn" value="&#xf004">
+                                            <i class="fa-solid fa-heart heart_red" ></i>
+                                        </button>
+                                    </form>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 @endforeach

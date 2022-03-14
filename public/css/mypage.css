@@ -108,8 +108,10 @@ body{
     width: 85%;
     margin: 50px auto;
 }
-h1{
-    margin: 10px 0 0 2%;
+h1 {
+    margin-left: 40px;
+    color: blue;
+    font-size: 30px;
 }
 .search{
     margin: 20px 0 0 auto;
@@ -189,4 +191,24 @@ h1{
     border: none;
     outline: none;
     background: transparent;
+}
+.reservation_card{
+    background: #5290ef;
+    color: white;
+    height: 280px;
+    width: 30%;
+}
+.reservation_ttl{
+
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+table{
+    height: 200px;
+}
+tr{
+    margin-bottom: 40px;
+}
+th{
+    text-align: left;
 }
