@@ -11,6 +11,7 @@ Route::get('/', [ShopController::class, 'index'])->name('index.shop');
 Route::post('/', [ShopController::class, 'search']);
 Route::get('/detail/{shop_id}', [ShopController::class, 'detail'])->name('detail.shop');
 Route::get('/mypage', [UserController::class, 'mypage'])->name('mypage');
+Route::get('/mypage/delete', [UserController::class, 'delete']);
 Route::post('/like', [LikeController::class, 'create'])->name('like');
 Route::post('/like/delete', [LikeController::class, 'delete'])->name('unlike');
 Route::post('/reserve', [ReservationController::class, 'create'])->name('create.reservation');

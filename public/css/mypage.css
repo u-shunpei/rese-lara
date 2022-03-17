@@ -93,13 +93,6 @@ h1 {
     margin-left: 40px;
     color: blue;
 }
-
-.ttl {
-    display: flex;
-    width: 85%;
-    margin: 30px auto 0;
-}
-
 body{
     background-color: #eee;
 }
@@ -117,14 +110,14 @@ h1 {
     margin: 20px 0 0 auto;
 }
 .shoplist{
-    width:85%;
+    width:50%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 .shop_card{
-    width: 23%;
+    width: 40%;
     height: 290px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
     margin-bottom: 17px;
@@ -148,60 +141,44 @@ h1 {
     padding: 3px 10px;
     border-radius: 5px;
 }
-.heart {
-    display: inline-block;
-    color: #333;/*線の色*/
-    position: relative;
-    margin-top: 6px;/*要調整*/
-    margin-left: 5px;/*要調整*/
-    width: 9px;
-    height: 9px;
-    border-left: solid 1px currentColor;
-    border-bottom: solid 1px currentColor;
-    transform: rotate(-45deg) scale(1);/*scale要調整*/
-    background: none;/*背景色*/
-}
-.heart:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -1px;
-    width: 8px;
-    height: 5px;
-    border-radius: 5px 5px 0 0;
-    border-top: solid 1px currentColor;
-    border-left: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-    background: none;/*背景色*/
-}
-.heart:after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 8px;
-    width: 5px;
-    height: 8px;
-    border-radius: 0 5px 5px 0;
-    border-top: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-    border-bottom: solid 1px currentColor;
-    background: none;/*背景色*/
-}
 .like_btn{
     border: none;
     outline: none;
     background: transparent;
+    display: inline-block;
+}
+.detail{
+    display: inline-block;
+}
+.container{
+    margin: 0 auto;
+}
+.reservation{
+    margin: 0 auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
 }
 .reservation_card{
     background: #5290ef;
     color: white;
     height: 280px;
-    width: 30%;
+    width: 100%;
+    padding-left: 30px;
+    border-radius: 10px;
 }
 .reservation_ttl{
 
     margin-bottom: 40px;
     padding-top: 40px;
+}
+.reserve{
+    margin-left: 20px;
+}
+.stu{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 table{
     height: 200px;
@@ -211,4 +188,39 @@ tr{
 }
 th{
     text-align: left;
+}
+td{
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+.flex-reservation{
+    display: flex;
+    justify-content: space-around;
+}
+.user_name, .stu{
+    width: 85%;
+    margin: 30px auto;
+}
+.user_name{
+    margin-left: 45%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.likes_shops{
+    padding-left: 36%;
+}
+.heart_red{
+    color: red;
+    font-size: 24px;
+    margin-left: 100px;
+}
+.fa-circle-xmark{
+    font-size: 20px;
+    color: white;
+}
+.x_btn{
+    background: transparent;
+    border: none;
+    margin-left: 70px;
 }

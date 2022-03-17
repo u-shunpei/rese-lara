@@ -12,8 +12,8 @@ class ShopController extends Controller
 {
     public function index()
     {
-        $shops = Shop::getShops(Auth::id());
-//        $shops = Shop::all();
+//        $shops = Shop::getShops(Auth::id());
+        $shops = Shop::all();
         $areas = Area::all();
         $genres = Genre::all();
 

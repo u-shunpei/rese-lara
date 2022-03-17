@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Like;
 use App\Models\Reservation;
@@ -13,9 +14,20 @@ class UserController extends Controller
     public function mypage()
     {
         $likes = Like::where('user_id', Auth::id())->get();
-        return view('home.mypage', compact( 'likes'));
+        $user = Auth::user();
+        $reservations = Reservation::where('user_id', Auth::id())->get();
+        return view('home.mypage', compact( 'likes', 'user', 'reservations'));
 //        $shops = shop::all();
 //        $reservations = reservation::all();
 //        return view('home.mypage', compact('shops', 'reservations'));
+    }
+    public function delete(Request $request)
+    {
+        Reservation::find($request->id)->delete();
+//        $user = Auth::user();
+//        $reservations = Reservation::all();
+//        $likes = Like::where('user_id', Auth::id())->get();
+//        return view('home.mypage', compact('user', 'reservations', 'likes'));
+        return redirect('/mypage');
     }
 }
