@@ -1,0 +1,107 @@
+a {
+    text-decoration: none;
+    color: blue
+}
+
+.nav {
+    position: absolute;
+    height: 250vh;
+    width: 100%;
+    left: -100%;
+    background: #eee;
+    transition: .7s;
+    text-align: center;
+}
+
+.nav ul {
+    padding-top: 80px;
+}
+
+.nav ul li {
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.menu {
+    display: inline-block;
+    width: 30px;
+    height: 34px;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background: blue;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+}
+
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+    display: inline-block;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.menu__line--top {
+    top: 12px;
+    width: 30%;
+}
+
+.menu__line--middle {
+    top: 21px;
+    width: 55%;
+}
+
+.menu__line--bottom {
+    bottom: 12px;
+    width: 20%;
+}
+
+.menu.open span:nth-of-type(1) {
+    top: 21px;
+    left: -1px;
+    transform: rotate(45deg);
+    width: 100%;
+}
+
+.menu.open span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu.open span:nth-of-type(3) {
+    top: 21px;
+    left: -1px;
+    transform: rotate(-45deg);
+    width: 100%;
+}
+
+.in {
+    transform: translateX(100%);
+}
+.logout {
+    background: transparent;
+    border: none;
+}
+a,
+.logout {
+    color: #1458e1;
+    font-size: 24px;
+    font-weight: 500;
+}
+h1 {
+    margin: 25px 0 0 40px;
+    color: blue;
+    font-size: 30px;
+}
+.ttl {
+    display: flex;
+    width: 85%;
+    margin: 30px auto 0;
+}
+body {
+    background-color: #eee;
+}

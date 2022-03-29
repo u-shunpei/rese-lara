@@ -23,7 +23,8 @@ class UserController extends Controller
     }
     public function delete(Request $request)
     {
-        Reservation::find($request->id)->delete();
+//        Reservation::where('shop_id', $request->shop_id)->where('user_id', Auth::id())->delete();
+        Reservation::where('id', $request->id)->where('user_id', Auth::id())->delete();
 //        $user = Auth::user();
 //        $reservations = Reservation::all();
 //        $likes = Like::where('user_id', Auth::id())->get();

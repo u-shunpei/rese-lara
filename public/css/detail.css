@@ -1,115 +1,8 @@
-a {
-    text-decoration: none;
-    color: blue
-}
-
-.nav {
-    position: absolute;
-    height: 250vh;
-    width: 100%;
-    left: -100%;
-    background: #eee;
-    transition: .7s;
-    text-align: center;
-}
-
-.nav ul {
-    padding-top: 80px;
-}
-
-.nav ul li {
-    list-style-type: none;
-    margin-top: 50px;
-}
-
-.menu {
-    display: inline-block;
-    width: 36px;
-    height: 32px;
-    cursor: pointer;
-    position: relative;
-    left: 20px;
-    top: 20px;
-}
-
-.menu__line--top,
-.menu__line--middle,
-.menu__line--bottom {
-    display: inline-block;
-    height: 4px;
-    background-color: #000;
-    position: absolute;
-    transition: 0.5s;
-}
-
-.menu__line--top {
-    top: 0;
-    width: 50%;
-}
-
-.menu__line--middle {
-    top: 14px;
-    width: 100%;
-}
-
-.menu__line--bottom {
-    bottom: 0;
-    width: 20%;
-}
-
-.menu.open span:nth-of-type(1) {
-    top: 14px;
-    transform: rotate(45deg);
-    width: 100%;
-}
-
-.menu.open span:nth-of-type(2) {
-    opacity: 0;
-}
-
-.menu.open span:nth-of-type(3) {
-    top: 14px;
-    transform: rotate(-45deg);
-    width: 100%;
-}
-
-.in {
-    transform: translateX(100%);
-}
-
-.logout {
-    background: transparent;
-    border: none;
-}
-
-a,
-.logout {
-    color: #1458e1;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-h1 {
-    margin-left: 40px;
-    color: blue;
-    font-size: 30px;
-}
-
-.ttl {
-    display: flex;
-    width: 85%;
-    margin: 30px auto 0;
-}
-
-body {
-    background-color: #eee;
-}
-
 main {
     display: flex;
     justify-content: space-around;
     width: 85%;
-    margin: 50px auto 0;
+    margin: 100px auto 0;
 }
 
 .card {
@@ -122,11 +15,16 @@ main {
 
 .back_btn {
     background: white;
-    padding: 3px;
+    padding: 4px 3px 7px 9px;
     border-radius: 5px;
     font-weight: bold;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+    display: inline-block;
+    width: 22px;
 }
-
+.shop_ttl{
+    margin-bottom: 30px;
+}
 .back {
     color: #000
 }
@@ -134,6 +32,8 @@ main {
 .card-shop_name {
     font-size: 24px;
     font-weight: bold;
+    margin: 3px 0 0 10px;
+    display: inline-block;
 }
 
 .reservation {
@@ -161,9 +61,16 @@ table {
     border-radius: 5px;
 }
 
+th{
+    padding-left: 10px;
+}
 th,
 td {
     text-align: left;
+}
+
+tr{
+    line-height: 2.5;
 }
 
 .reserve {

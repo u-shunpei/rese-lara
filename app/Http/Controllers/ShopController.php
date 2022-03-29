@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\Area;
 use App\Models\Genre;
-use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
@@ -19,11 +18,17 @@ class ShopController extends Controller
 
         return view('home.index', compact('shops', 'areas', 'genres'));
     }
-    public function detail(Request $request)
+
+    public function detail($shop_id)
     {
-        $shops = Shop::all();
-        return view('home.detail', compact('shops'));
+        $shop = Shop::find($shop_id);
+        if (is_null($shop)) {
+            //エラーですよ
+            return '';
+        }
+        return view('home.detail', compact('shop'));
     }
+
     public function search(Request $request)
     {
 
