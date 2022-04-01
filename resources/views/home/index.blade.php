@@ -7,7 +7,6 @@
 
 <div class="nav_flex">
     @section('content')
-        @auth
             <form action="/" method="post" class="search">
                 @csrf
                 <select name="area_id" class="area_id" id="">
@@ -30,7 +29,6 @@
                 <button class="search_btn">
                     <i class="fas fa-search"></i>
                 </button>
-
             </form>
 </div>
 @if(isset($shops))
@@ -75,7 +73,7 @@
             @endforeach
         </div>
     </main>
-    @endif @endauth
+    @endif
     </div>
     @endsection
 
