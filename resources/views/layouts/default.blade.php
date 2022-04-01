@@ -36,7 +36,7 @@
                 <ul>
                     <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
                     <li>
-                        <a href="https://ancient-gorge-99039.herokuapp.com/resister">Registration</a
+                        <a href="https://ancient-gorge-99039.herokuapp.com/register">Registration</a
                         >
                     </li>
                     <li><a href="https://ancient-gorge-99039.herokuapp.com/login">Login</a></li>
