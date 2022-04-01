@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/nav.css" />
-    <script src="/js/main.js"></script>
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -94,7 +93,7 @@
         </div>
     </x-auth-card>
 </x-guest-layout>
-
+<script src="/js/main.js"></script>
 </body>
 </html>
 
