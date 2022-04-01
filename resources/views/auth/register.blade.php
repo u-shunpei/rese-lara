@@ -8,13 +8,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/nav.css" />
+    <script src="/js/main.js"></script>
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-</body>
-</html>
-
 <x-guest-layout>
     <div class="ttl">
         @auth
@@ -34,23 +31,23 @@
                 <span class="menu__line--bottom"></span>
             </div>
         @endauth @guest
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
-                        <li>
-                            <a href="https://ancient-gorge-99039.herokuapp.com/register">Registration</a
-                            >
-                        </li>
-                        <li><a href="https://ancient-gorge-99039.herokuapp.com/login">Login</a></li>
-                    </ul>
-                </nav>
-                <div class="menu" id="menu">
-                    <span class="menu__line--top"></span>
-                    <span class="menu__line--middle"></span>
-                    <span class="menu__line--bottom"></span>
-                </div>
-            @endguest
-            <h1>Rese</h1>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
+                    <li>
+                        <a href="https://ancient-gorge-99039.herokuapp.com/register">Registration</a
+                        >
+                    </li>
+                    <li><a href="https://ancient-gorge-99039.herokuapp.com/login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="menu" id="menu">
+                <span class="menu__line--top"></span>
+                <span class="menu__line--middle"></span>
+                <span class="menu__line--bottom"></span>
+            </div>
+        @endguest
+        <h1>Rese</h1>
     </div>
     <x-auth-card>
         <div class="card">
@@ -97,3 +94,7 @@
         </div>
     </x-auth-card>
 </x-guest-layout>
+
+</body>
+</html>
+
