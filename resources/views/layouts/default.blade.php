@@ -36,10 +36,10 @@
                 <ul>
                     <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
                     <li>
-                        <a href="http://localhost:8000/register">Registration</a
+                        <a href="https://ancient-gorge-99039.herokuapp.com/resister">Registration</a
                         >
                     </li>
-                    <li><a href="http://localhost:8000/login">Login</a></li>
+                    <li><a href="https://ancient-gorge-99039.herokuapp.com/login">Login</a></li>
                 </ul>
             </nav>
             <div class="menu" id="menu">
