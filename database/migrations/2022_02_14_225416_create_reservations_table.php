@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-//            $table->foreignId('shop_id')->constrained('shops');
-//            $table->foreignId('user_id')->constrained('users');
+            $table->integer('shop_id');
+            $table->foreign('shop_id')->references('id')->on('shops');
+            $table->integer('user_id');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->string('num_of_users')->nullable(false);
             $table->date('date')->nullable(false);
             $table->time('time')->nullable(false);
