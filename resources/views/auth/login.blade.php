@@ -19,14 +19,14 @@
         @auth
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
+                    <li><a href="https://restaurant-pj.herokuapp.com/">Home</a></li>
                     <form action="/logout" method="post">
                         @csrf
                         <li>
                             <button class="logout">Logout</button>
                         </li>
                     </form>
-                    <li><a href="https://ancient-gorge-99039.herokuapp.com/mypage">Mypage</a></li>
+                    <li><a href="https://restaurant-pj.herokuapp.com/mypage">Mypage</a></li>
                 </ul>
             </nav>
             <div class="menu" id="menu">
@@ -37,12 +37,12 @@
         @endauth @guest
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="https://ancient-gorge-99039.herokuapp.com/">Home</a></li>
+                    <li><a href="https://restaurant-pj.herokuapp.com/">Home</a></li>
                     <li>
-                        <a href="https://ancient-gorge-99039.herokuapp.com/register">Registration</a
+                        <a href="https://restaurant-pj.herokuapp.com/register">Registration</a
                         >
                     </li>
-                    <li><a href="https://ancient-gorge-99039.herokuapp.com/login">Login</a></li>
+                    <li><a href="https://restaurant-pj.herokuapp.com/login">Login</a></li>
                 </ul>
             </nav>
             <div class="menu" id="menu">
