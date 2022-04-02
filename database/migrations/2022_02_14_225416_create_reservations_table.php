@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->foreign('shop_id')->references('id')->on('shops');
             $table->unsignedBigInteger('user_id');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('num_of_users')->nullable(false);
             $table->date('date')->nullable(false);
             $table->time('time')->nullable(false);
