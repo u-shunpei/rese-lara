@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('id');
             $table->foreignId('shop_id')->constrained('shops');
             $table->foreignId('user_id')->constrained('users');
             $table->string('num_of_users')->nullable(false);
