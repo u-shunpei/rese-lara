@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false);
-            $table->foreignId('area_id')->constrained('areas');
-            $table->foreignId('genre_id')->constrained('genres');
+//            $table->foreignId('area_id')->constrained('areas');
+//            $table->foreignId('genre_id')->constrained('genres');
             $table->string('description')->nullable(false);
             $table->string('image_url')->nullable(false);
             $table->timestamp('created_at')->useCurrent()->nullable();
