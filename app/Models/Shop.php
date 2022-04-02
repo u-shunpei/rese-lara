@@ -10,7 +10,9 @@ class Shop extends Model
     use HasFactory;
 
     protected $guarded = array(
-        'id', 'area_id', 'genre_id');
+        'id');
+
+    protected $fillable = ['description', 'image_url', 'area_id', 'genre_id'];
 
     public static $rules = array(
         'name' => 'required',
