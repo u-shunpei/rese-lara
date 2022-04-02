@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="css/nav.css" />
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
 <x-guest-layout>
+
+<body>
+
     <div class="ttl">
         @auth
             <nav class="nav" id="nav">
@@ -92,8 +95,10 @@
             </div>
         </div>
     </x-auth-card>
-</x-guest-layout>
+
 <script src="/js/main.js"></script>
 </body>
+
+</x-guest-layout>
 </html>
 
