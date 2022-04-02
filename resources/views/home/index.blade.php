@@ -7,31 +7,31 @@
 
 <div class="nav_flex">
     @section('content')
-            <form action="/" method="post" class="search">
-                @csrf
-                <select name="area_id" class="area_id" id="">
-                    <option value="">All area</option>
-                    @foreach($areas as $area)
-                        <option value="{{ $area->id }}" name="name">
-                            {{ $area->name }}
-                        </option>
-                    @endforeach
-                </select>l
-                <select name="genre_id" class="genre_id" id="">
-                    <option value="">All genre</option>
-                    @foreach($genres as $genre)
-                        <option value="{{ $genre->id }}" name="genre_name">
-                            {{ $genre->name }}
-                        </option>
-                    @endforeach
-                </select>
-                <input type="search" name="name" class="name" placeholder="search..."/>
-                <button class="search_btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+        <form action="/" method="post" class="search">
+            @csrf
+            <select name="area_id" class="area_id" id="">
+                <option value="">All area</option>
+                @foreach($areas as $area)
+                    <option value="{{ $area->id }}" name="name">
+                        {{ $area->name }}
+                    </option>
+                @endforeach
+            </select>l
+            <select name="genre_id" class="genre_id" id="">
+                <option value="">All genre</option>
+                @foreach($genres as $genre)
+                    <option value="{{ $genre->id }}" name="genre_name">
+                        {{ $genre->name }}
+                    </option>
+                @endforeach
+            </select>
+            <input type="search" name="name" class="name" placeholder="search..."/>
+            <button class="search_btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
 </div>
-
+@if(isset($shops))
     <main>
         <div class="shop_list">
             @foreach ($shops as $shop)
@@ -73,7 +73,7 @@
             @endforeach
         </div>
     </main>
-
+    @endif
     </div>
     @endsection
 
