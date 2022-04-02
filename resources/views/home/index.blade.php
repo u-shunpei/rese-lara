@@ -31,7 +31,7 @@
                 </button>
             </form>
 </div>
-@if(isset($shops))
+
     <main>
         <div class="shop_list">
             @foreach ($shops as $shop)
@@ -73,7 +73,7 @@
             @endforeach
         </div>
     </main>
-    @endif
+
     </div>
     @endsection
 
