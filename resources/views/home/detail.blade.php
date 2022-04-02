@@ -8,7 +8,7 @@
     <div class="card">
         <div class="shop_ttl">
             <span class="back_btn">
-                <a href="http://localhost:8000/" class="back">&lt;</a>
+                <a href="https://restaurant-pj.herokuapp.com/" class="back">&lt;</a>
             </span>
             <span class="card-shop_name">{{ $shop->name }}</span>
         </div>
