@@ -16,7 +16,7 @@
                         {{ $area->name }}
                     </option>
                 @endforeach
-            </select>l
+            </select>
             <select name="genre_id" class="genre_id" id="">
                 <option value="">All genre</option>
                 @foreach($genres as $genre)
