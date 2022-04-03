@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css"/>
-    <link rel="stylesheet" href="css/nav.css"/>
+@section('head')
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
-</head>
+@endsection
 
 <x-guest-layout>
-
+@section('content')
     <body>
     <div class="ttl">
         @auth
@@ -111,7 +103,9 @@
             </div>
         </div>
     </x-auth-card>
-    <script src="/js/main.js"></script>
-    </body>
+    @endsection
+
+    @section('scripts')
+    @endsection
 </x-guest-layout>
-</html>
+
