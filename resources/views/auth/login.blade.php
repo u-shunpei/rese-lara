@@ -1,50 +1,13 @@
 @extends('layouts.default')
 
 @section('head')
+    <link rel="stylesheet" href="/css/login.css"/>
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 @endsection
 
 <x-guest-layout>
 @section('content')
-    <body>
-    <div class="ttl">
-        @auth
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="https://restaurant-pj.herokuapp.com/">Home</a></li>
-                    <form action="/logout" method="post">
-                        @csrf
-                        <li>
-                            <button class="logout">Logout</button>
-                        </li>
-                    </form>
-                    <li><a href="https://restaurant-pj.herokuapp.com/mypage">Mypage</a></li>
-                </ul>
-            </nav>
-            <div class="menu" id="menu">
-                <span class="menu__line--top"></span>
-                <span class="menu__line--middle"></span>
-                <span class="menu__line--bottom"></span>
-            </div>
-        @endauth @guest
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a href="https://restaurant-pj.herokuapp.com/">Home</a></li>
-                    <li>
-                        <a href="https://restaurant-pj.herokuapp.com/register">Registration</a
-                        >
-                    </li>
-                    <li><a href="https://restaurant-pj.herokuapp.com/login">Login</a></li>
-                </ul>
-            </nav>
-            <div class="menu" id="menu">
-                <span class="menu__line--top"></span>
-                <span class="menu__line--middle"></span>
-                <span class="menu__line--bottom"></span>
-            </div>
-        @endguest
-        <h1>Rese</h1>
-    </div>
+
     <x-auth-card>
         <div class="card">
             <h2>Login</h2>
