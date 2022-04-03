@@ -50,9 +50,11 @@
         @endguest
         <h1>Rese</h1>
     </div>
+    @auth
     <main>
         @yield('content')
     </main>
+    @endauth
 <script src="/js/main.js"></script>
 @yield('scripts')
 </body>
