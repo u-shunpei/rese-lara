@@ -13,6 +13,7 @@ class Like extends Model
 
     public static $rules = array(
         'shop_id' => 'required',
+        'user_id' => 'required'
     );
 
     public function user() {
