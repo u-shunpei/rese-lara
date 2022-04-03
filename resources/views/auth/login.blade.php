@@ -42,6 +42,9 @@
                         <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" placeholder="Password"/>
                     </div>
 
+                    <!-- Remember Me -->
+                    <div class="block mt-4">
+
 
                     </div>
 
