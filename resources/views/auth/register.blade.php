@@ -6,10 +6,9 @@
 
 <x-guest-layout>
 @section('content')
-        <h2>Resistration</h2>
     <x-auth-card>
         <div class="card">
-
+            <h2>Resistration</h2>
 
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
