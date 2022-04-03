@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('head')
-    <link rel="stylesheet" href="/css/login.css"/>
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 @endsection
 
