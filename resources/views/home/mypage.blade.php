@@ -62,7 +62,7 @@
                                         <span class="shop_genre">＃{{$like->shop->genre->name}}</span>
                                     </p>
                                     <div class="btn">
-                                        <a href="{{ route('detail.shop', $like->id) }}" class="detail_btn">詳しく見る</a>
+                                        <a href="{{ route('shop.detail', $like->id) }}" class="detail_btn">詳しく見る</a>
                                         <button type="submit" class="fas like_btn" value="&#xf004">
                                             <i class="fa-solid fa-heart heart_red"></i>
                                         </button>
