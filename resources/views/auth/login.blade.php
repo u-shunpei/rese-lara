@@ -44,7 +44,6 @@
 
                     <!-- Remember Me -->
                     <div class="block mt-4">
-                    {{ __('Remember me') }}
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
