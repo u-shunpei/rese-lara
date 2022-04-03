@@ -5,12 +5,14 @@
 @endsection
 
 @section('content')
-    <div class="card">
-        <div class="thanks">
-            <span class="txt">ご予約ありがとうございます</span><br>
-            <button type="button" class="return_btn" onClick="history.back()">戻る</button>
+    @auth
+        <div class="card">
+            <div class="thanks">
+                <span class="txt">ご予約ありがとうございます</span><br>
+                <button type="button" class="return_btn" onClick="history.back()">戻る</button>
+            </div>
         </div>
-    </div>
+    @endauth
 @endsection
 
 @section('scripts')
