@@ -14,7 +14,6 @@ class LikeController extends Controller
     $input = $request->validated();
     Like::create([
       'shop_id' => $input['shop_id'],
-      'user_id' => Auth::id()
     ]);
     return back();
   }
