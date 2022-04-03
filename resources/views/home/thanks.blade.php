@@ -8,7 +8,7 @@
     <div class="card">
         <p>会員登録ありがとうございます</p>
         <button>
-            <a href="http://localhost:8000/login">ログインする</a>
+            <a href="https://restaurant-pj.herokuapp.com/">ログインする</a>
         </button>
     </div>
 @endsection
