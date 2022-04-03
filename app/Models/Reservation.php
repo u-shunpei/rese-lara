@@ -18,10 +18,14 @@ class Reservation extends Model
         'time' => 'required',
         'date' => 'required'
     );
-    public function shop() {
+
+    public function shop()
+    {
         return $this->belongsTo('App\Models\Shop');
     }
-    public function user() {
+
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
 }

@@ -25,7 +25,7 @@ class ShopsTableSeeder extends Seeder
         ];
         DB::table('shops')->insert($param);
 
-         $param = [
+        $param = [
             'name' => '牛助',
             'area_id' => '2',
             'genre_id' => '2',

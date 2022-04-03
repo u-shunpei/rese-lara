@@ -16,10 +16,13 @@ class Like extends Model
         'user_id' => 'required'
     );
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
-    public function shop() {
+
+    public function shop()
+    {
         return $this->belongsTo('App\Models\Shop');
     }
 }

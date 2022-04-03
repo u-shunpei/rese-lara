@@ -11,7 +11,6 @@ class ShopController extends Controller
 {
     public function index()
     {
-//        $shops = Shop::getShops(Auth::id());
         $shops = Shop::all();
         $areas = Area::all();
         $genres = Genre::all();
@@ -24,7 +23,7 @@ class ShopController extends Controller
         $shop = Shop::find($shop_id);
         if (is_null($shop)) {
             //エラーですよ
-            return '';
+            return 'エラー';
         }
         return view('home.detail', compact('shop'));
     }

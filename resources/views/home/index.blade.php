@@ -50,7 +50,7 @@
                             >
                         </p>
                         <div class="btn">
-                            <a href="{{ route('detail.shop', $shop->id) }}" class="detail_btn">詳しく見る</a>
+                            <a href="{{ route('shop.detail', $shop->id) }}" class="detail_btn">詳しく見る</a>
                             @if(count($shop->likes)===0)
                                 <form action="/like" method="POST" class="like">
                                     @csrf

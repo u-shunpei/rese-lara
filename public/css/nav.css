@@ -82,26 +82,31 @@ a {
 .in {
     transform: translateX(100%);
 }
+
 .logout {
     background: transparent;
     border: none;
 }
+
 a,
 .logout {
     color: #1458e1;
     font-size: 24px;
     font-weight: 500;
 }
+
 h1 {
     margin: 25px 0 0 40px;
     color: blue;
     font-size: 30px;
 }
+
 .ttl {
     display: flex;
     width: 85%;
     margin: 30px auto 0;
 }
+
 body {
     background-color: #eee;
 }

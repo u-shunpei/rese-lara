@@ -13,7 +13,8 @@ class Area extends Model
 
     protected $fillable = ['name'];
 
-    public function shop() {
+    public function shop()
+    {
         return $this->hasMany('App\Models\Shop');
     }
 }

@@ -1,4 +1,4 @@
-.card{
+.card {
     background: white;
     width: 30%;
     margin: 100px auto 0;
@@ -6,19 +6,22 @@
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
 }
-p{
+
+p {
     font-size: 24px;
     text-align: center;
     padding-top: 80px;
     white-space: nowrap;
 }
-.home_btn{
+
+.home_btn {
     background: blue;
     border: none;
     border-radius: 5px;
     margin: 40px auto 0;
     display: block;
 }
-.home{
+
+.home {
     color: white;
 }

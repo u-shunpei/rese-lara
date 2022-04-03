@@ -22,9 +22,11 @@ main {
     display: inline-block;
     width: 22px;
 }
-.shop_ttl{
+
+.shop_ttl {
     margin-bottom: 30px;
 }
+
 .back {
     color: #000
 }
@@ -61,15 +63,16 @@ table {
     border-radius: 5px;
 }
 
-th{
+th {
     padding-left: 10px;
 }
+
 th,
 td {
     text-align: left;
 }
 
-tr{
+tr {
     line-height: 2.5;
 }
 

@@ -43,12 +43,15 @@ class User extends Authenticatable
     ];
 
     protected $table = 'users';
-    
-     public function reservation() {
-         return $this->hasMany('App\Models\Reservation');
-     }
-     public function like() {
-         return $this->hasMany('App\Models\Like');
-     }
+
+    public function reservation()
+    {
+        return $this->hasMany('App\Models\Reservation');
+    }
+
+    public function like()
+    {
+        return $this->hasMany('App\Models\Like');
+    }
 
 }
