@@ -99,11 +99,11 @@ tr {
 }
 
 .reserve_btn {
-    padding: 10px 30px;
+    padding: 20px 30px;
     background: blue;
     color: white;
     width: 100%;
-    margin-top: 38%;
+    margin-top: 35%;
     border-radius: 0 0 5px 5px;
     border: none;
 }
