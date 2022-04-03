@@ -18,7 +18,7 @@
                                 @csrf
                                 <div class="reservation_card">
                                     <div class="reservation_ttl">
-                                        <span class="reserve"><i class="fa-solid fa-clock"></i>予約{{ $reservation->id }}</span>
+                                        <span class="reserve"><i class="fa-solid fa-clock"></i>予約{</span>
                                         <button class="x_btn">
                                             <i class="fa-regular fa-circle-xmark"></i>
                                         </button>
