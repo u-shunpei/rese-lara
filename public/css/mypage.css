@@ -126,6 +126,7 @@ td {
 
 .detail_btn {
     background-color: #1458e1;
+    width: fit-content;
     border: none;
     color: white;
     padding: 9px 12px;
