@@ -156,17 +156,4 @@ td {
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
-    .flex_items {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
 
-@media screen and (min-width: 768px) {
-    .shop_card {
-        width: 45%;
-    }
-}
