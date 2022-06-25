@@ -112,9 +112,23 @@ body {
 }
 
 @media screen and (max-width: 480px){
+    .menu {
+        display: inline-block;
+        width: 30px;
+        height: 34px;
+        cursor: pointer;
+        position: relative;
+        top: 20px;
+        background: blue;
+        padding: 5px 5px 5px 10px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+    }
+}
+@media screen and (max-width: 480px){
     .ttl {
         display: flex;
-        width: 95%;
+        width: 100%;
         margin: 30px auto 0;
     }
 }
