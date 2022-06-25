@@ -103,15 +103,21 @@
 @media screen and (max-width: 480px){
     .search {
         white-space: nowrap;
-        margin-top: 10px;
+        margin-top: 20px;
         display: flex;
     }
 }
 @media screen and (max-width: 480px) {
     .nav_flex {
         display: block;
-        width: 100%;
+        width: 90%;
         margin: 0 auto 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .name {
+        width: 100px;
     }
 }
 
