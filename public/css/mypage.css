@@ -92,7 +92,7 @@ td {
 }
 
 .shop_card {
-    width: fit-content;
+    width: 45%;
     height: fit-content;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
     border-radius: 5px;
@@ -154,10 +154,4 @@ td {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width: 768px) {
-    .shop_card {
-        width: 45%;
-    }
 }
