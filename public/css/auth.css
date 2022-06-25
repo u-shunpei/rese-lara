@@ -24,6 +24,10 @@ h2 {
     padding-left: 20px;
 }
 
+.input, .mt-4 {
+    width: 90%;
+}
+
 .w-full {
     border-top: none;
     border-left: none;

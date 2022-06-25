@@ -22,14 +22,14 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div>
+                        <div class="input">
                             <x-label for="name"/>
 
                             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus placeholder="Username"/>
                         </div>
 
                         <!-- Email Address -->
-                        <div>
+                        <div class="input">
                             <x-label for="email"/>
 
                             <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="Email"/>
