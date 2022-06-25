@@ -102,6 +102,7 @@
 
 @media screen and (max-width: 480px) {
     .nav_flex {
+        display: block;
         width: 87%;
         margin: 0 auto 20px;
     }
