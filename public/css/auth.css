@@ -47,3 +47,9 @@ h2 {
     width: 80%;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 480px){
+    .card{
+        width: 40%;
+    }
+}
