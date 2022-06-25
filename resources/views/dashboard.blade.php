@@ -10,6 +10,7 @@
         <p>ログインしました</p>
         <button class="home_btn">
             <a href="https://restaurant-pj.herokuapp.com/" class="home">Homeへ</a>
+{{--            <a href="http://localhost:8000/">Homeへ</a>--}}
         </button>
     </div>
 @endsection

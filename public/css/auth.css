@@ -37,7 +37,7 @@ h2 {
     border: none;
     border-radius: 5px;
     display: block;
-    width: 22%;
+    width: fit-content;
     margin: 0 0 0 auto;
     white-space: nowrap;
     padding: 10px;
@@ -46,10 +46,4 @@ h2 {
 .card_container {
     width: 80%;
     margin: 0 auto;
-}
-
-@media screen and (max-width: 480px){
-    .card{
-        width: 40%;
-    }
 }

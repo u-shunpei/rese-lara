@@ -9,7 +9,7 @@ use App\Http\Controllers\ReservationController;
 
 Route::get('/', [ShopController::class, 'index'])->name('index.shop');
 Route::post('/', [ShopController::class, 'search'])->name('shop.search');
-Route::get('/detail/{shop_id?}', [ShopController::class, 'detail'])->name('shop.detail');
+Route::get('/detail/{shop_id?}', [ShopController::class, 'detail'])->name('detail.shop');
 Route::get('/mypage', [UserController::class, 'mypage'])->name('mypage');
 Route::post('/mypage/delete', [UserController::class, 'delete'])->name('mypage.delete');
 Route::post('/like', [LikeController::class, 'create'])->name('like');
