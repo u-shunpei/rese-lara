@@ -150,10 +150,14 @@ td {
 }
 
 .flex_items {
-    width: 45%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-
+@media screen and (max-width: 768px) {
+    .shop_card {
+        width: 45%;
+    }
+}
