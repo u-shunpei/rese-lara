@@ -7,9 +7,10 @@ body {
     width: 30%;
     height: fit-content;
     margin: 100px auto;
-    text-align: leftcd;
+    text-align: left;
     box-shadow: 2px 2px 4px;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
 
 h2 {

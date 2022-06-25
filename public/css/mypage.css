@@ -32,6 +32,7 @@
     border-radius: 5px;
     margin-bottom: 10px;
     width: fit-content;
+    display: flex;
 }
 
 .reservation_ttl {
