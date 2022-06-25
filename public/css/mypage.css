@@ -150,7 +150,7 @@ td {
 }
 
 .flex_items {
-    width: 100%;
+    width: 45%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
