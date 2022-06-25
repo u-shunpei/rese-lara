@@ -91,7 +91,7 @@ td {
 }
 
 .shop_card {
-    width: 80%;
+    width: fit-content%;
     height: fit-content;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
     border-radius: 5px;
@@ -140,6 +140,7 @@ td {
 
 .like_btn {
     border: none;
+    background: transparent;
 }
 
 .heart_red {
