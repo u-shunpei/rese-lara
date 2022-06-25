@@ -39,7 +39,13 @@
     margin: 0 auto;
 }
 
-
+.shop_card {
+    width: 45%;
+    height: 30%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
+    margin-bottom: 17px;
+    border-radius: 10px;
+}
 
 .shop_card img {
     width: 100%;
