@@ -26,7 +26,8 @@
 
 .reservation {
     background: #1458e1;
-    height: 30vh;
+    height: fit-content;
+    padding: 10px;
     color: white;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -91,7 +92,7 @@ td {
 
 .shop_card {
     width: 80%;
-    height: 30vh;
+    height: fit-content;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.41);
     border-radius: 5px;
     margin-right: 15px;
