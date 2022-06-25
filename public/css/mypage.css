@@ -137,7 +137,6 @@ td {
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
-    width: fit-content;
 }
 
 .like_btn {
@@ -155,4 +154,10 @@ td {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .shop_card{
+        width: 80%;
+    }
 }
