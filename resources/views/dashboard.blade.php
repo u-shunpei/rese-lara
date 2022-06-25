@@ -9,7 +9,7 @@
     <div class="card">
         <p>ログインしました</p>
         <button class="home_btn">
-            <a href="https://restaurant-pj.herokuapp.com/" class="home">Homeへ</a>
+            <a href="https://rese-larapj.herokuapp.com/" class="home">Homeへ</a>
 {{--            <a href="http://localhost:8000/">Homeへ</a>--}}
         </button>
     </div>
