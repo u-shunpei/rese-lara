@@ -52,3 +52,16 @@ h2 {
     width: 80%;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 480px){
+    .card {
+        background-color: white;
+        width: 80%;
+        height: fit-content;
+        margin: 100px auto;
+        text-align: left;
+        box-shadow: 2px 2px 4px;
+        border-radius: 5px;
+        padding-bottom: 10px;
+    }
+}
