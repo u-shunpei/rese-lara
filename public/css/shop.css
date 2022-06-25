@@ -47,10 +47,6 @@
     border-radius: 10px;
 }
 
-.shop_card img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-}
 
 .shop_content {
     padding: 10px;
@@ -85,7 +81,9 @@
     justify-content: space-between;
 }
 
-
+.like_btn {
+    border: none;
+}
 
 .heart_red {
     color: red;
