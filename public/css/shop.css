@@ -100,6 +100,13 @@
     font-size: 20px;
 }
 
+@media screen and (max-width: 480px) {
+    .nav_flex {
+        width: 87%;
+        margin: 0 auto 20px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .shop_card {
         width: 23%;
@@ -117,3 +124,5 @@
         width: 300px;
     }
 }
+
+
