@@ -110,3 +110,11 @@ h1 {
 body {
     background-color: #eee;
 }
+
+@media screen and (max-width: 480px){
+    .ttl {
+        display: flex;
+        width: 95%;
+        margin: 30px auto 0;
+    }
+}
