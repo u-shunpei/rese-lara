@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('head')
-    <link rel="stylesheet" href="/css/thanks.css" />
+    <link rel="stylesheet" href="/css/thanks.css"/>
     <script src="https://kit.fontawesome.com/d5b4d4baf0.js" crossorigin="anonymous"></script>
 @endsection
 
@@ -9,8 +9,8 @@
     <div class="card">
         <p>ログインしました</p>
         <button class="home_btn">
-            <a href="https://rese-larapj.herokuapp.com/" class="home">Homeへ</a>
-{{--            <a href="http://localhost:8000/">Homeへ</a>--}}
+            {{--            <a href="https://rese-larapj.herokuapp.com/" class="home">Homeへ</a>--}}
+            <a href="http://localhost:8000/" class="home">Homeへ</a>
         </button>
     </div>
 @endsection

@@ -5,6 +5,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\StripePaymentsController;
 
 
 Route::get('/', [ShopController::class, 'index'])->name('index.shop');
@@ -18,6 +19,9 @@ Route::post('/reserve', [ReservationController::class, 'create'])->name('create.
 Route::get('/reserve', [ReservationController::class, 'index'])->name('reservation.index');
 Route::get('/detail/{shop_id}', [ReservationController::class, 'back'])->name('reservation.back');
 
+Route::get('/cash', [StripePaymentsController::class, 'index'] )->name('index.stripe');
+Route::get('/payment', [StripePaymentsController::class, 'payment'])->name('payment');
+Route::get('/complete', [StripePaymentsController::class, 'complete'])->name('complete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
