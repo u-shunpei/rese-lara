@@ -6,6 +6,7 @@
 @endsection
 
 <div class="nav_flex">
+    a
     @section('content')
         @auth
             <form action="/" method="post" class="search">
